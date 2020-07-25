@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoryFragment">
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.raka.newslisttest.presentation.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_newsSourceFragment"
+            app:destination="@id/newsSourceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsSourceFragment"
+        android:name="com.raka.newslisttest.presentation.newssource.NewsSourcesFragment"
+        android:label="fragment_news_source"
+        tools:layout="@layout/fragment_news_source" >
+        <action
+            android:id="@+id/action_newsSourceFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <argument
+            android:name="category"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.raka.newslisttest.presentation.article.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <action
+            android:id="@+id/action_articleFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment" />
+        <argument
+            android:name="category"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="source"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="idsource"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="com.raka.newslisttest.presentation.detailarticle.DetailArticleFragment"
+        android:label="fragment_detail_article"
+        tools:layout="@layout/fragment_detail_article" >
+        <argument
+            android:name="url"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+</navigation>

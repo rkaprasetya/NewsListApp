@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NewsListTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Category</string>
+    <string name="news_source">News Source</string>
+    <string name="refresh">Retry</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="article_title">Article title</string>
+    <string name="appbar_article_title">Articles from %s</string>
+    <string name="click_to_read_more">Click to read more</string>
+    <string name="detail_article">Detail article</string>
+</resources>

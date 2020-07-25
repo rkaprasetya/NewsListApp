@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.detailarticle.DetailArticleFragment">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_marginStart="@dimen/appbar_title_margin_start"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_width="@dimen/appbar_back_size"
+                android:layout_height="@dimen/appbar_back_size"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/appbar_margin_top_btm_start"
+                android:layout_marginTop="@dimen/appbar_margin_top_btm_start"
+                android:layout_marginBottom="@dimen/appbar_margin_top_btm_start"
+                android:text="@string/detail_article"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/appbar_txt_size" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <WebView
+        android:id="@+id/wv_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ab_detail" />
+    <Button
+        android:id="@+id/btn_detail_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_retry_margin_start_end"
+        android:layout_marginEnd="@dimen/btn_retry_margin_start_end"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/btn_retry_margin_bottom"
+        android:text="@string/refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
